@@ -1,10 +1,4 @@
-//
-//  Constant.cpp
-//  Neuron_Program
-//
-//  Created by Nina Wahler on 03.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #include "Constant.hpp"
 
