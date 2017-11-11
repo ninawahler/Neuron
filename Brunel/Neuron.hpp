@@ -1,10 +1,4 @@
-//
-//  Neuron.hpp
-//  Brunel
-//
-//  Created by Nina Wahler on 07.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #ifndef Neuron_hpp
 #define Neuron_hpp
