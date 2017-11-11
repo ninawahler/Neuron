@@ -1,10 +1,3 @@
-//
-//  Constant.hpp
-//  Neuron_Program
-//
-//  Created by Nina Wahler on 02.10.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
 
 #ifndef Constant_hpp
 #define Constant_hpp
