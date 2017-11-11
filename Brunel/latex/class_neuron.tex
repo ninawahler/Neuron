@@ -1,0 +1,250 @@
+\hypertarget{class_neuron}{}\section{Neuron Class Reference}
+\label{class_neuron}\index{Neuron@{Neuron}}
+
+
+{\ttfamily \#include $<$Neuron.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_neuron_abefafe25b0ffd7144510bd26d193fe3b}{Neuron} (double J)
+\item 
+double \hyperlink{class_neuron_a16fc44c9bb8a982d7d79b6df830c02c2}{get\+Membrane\+Pot} ()
+\item 
+double \hyperlink{class_neuron_aa7c31be66993ad85efbb5b3a5dc4b9be}{get\+Nbr\+Spikes} ()
+\item 
+double \hyperlink{class_neuron_ad2768482bcfc532fac89f53b512b6ac8}{get\+I\+Exp} ()
+\item 
+bool \hyperlink{class_neuron_a362d9688fd4da9d6edbd28f8691fb0dc}{get\+Spike\+Occured} ()
+\item 
+double \hyperlink{class_neuron_a13c081d437037dc7b63108e524f66fc7}{get\+Time\+Own} ()
+\item 
+double \hyperlink{class_neuron_a178217a3d7ccc951c207a78883a26546}{acces\+Vector\+Spikes\+Time} (int i)
+\item 
+unsigned long \hyperlink{class_neuron_a807d071a7f1149f9db0536af4f45e684}{get\+Size\+Connection} ()
+\item 
+void \hyperlink{class_neuron_a7613a6978d583cbbe287876144325780}{set\+Membrane\+Pot} (double mp)
+\item 
+void \hyperlink{class_neuron_ad267b5027c8549d85ade592918286b89}{set\+I\+Ext} (double ie)
+\item 
+void \hyperlink{class_neuron_abce9bb9eecd7ff1f93b5a816bdaacc6f}{simulation} (int const \&poisson)
+\item 
+void \hyperlink{class_neuron_ae45fbadb556036a0f33b2f1790ccd5d7}{give\+Spike} (double const \&temps, double give)
+\item 
+void \hyperlink{class_neuron_aa31661c57b4a07fc1ec4984be980b678}{add\+Buffer} (double const \&ut, double get)
+\item 
+void \hyperlink{class_neuron_a62d6ff8e0fb0f776dfa9bc555a994b8b}{reset\+Buffer} (double temps)
+\item 
+int \hyperlink{class_neuron_a0276a70354f2fb046123efeec43420dc}{idx\+Read} (double now)
+\item 
+void \hyperlink{class_neuron_a41d30979b71ec096e1fd04f9e4de25d4}{connect\+With} (\hyperlink{class_neuron}{Neuron} $\ast$other)
+\item 
+\hyperlink{class_neuron_a94a250ce7e167760e593979b899745b1}{$\sim$\+Neuron} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_neuron}{Neuron} Creation and Initialisation of all attributs that a neuron needs Different functions to simulate a neuron\+: connecting them, calculating its input,... Many functions to modify or have acces to the varibales outside of the class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_neuron_abefafe25b0ffd7144510bd26d193fe3b}\label{class_neuron_abefafe25b0ffd7144510bd26d193fe3b}} 
+\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\index{Neuron@{Neuron}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{Neuron()}{Neuron()}}
+{\footnotesize\ttfamily Neuron\+::\+Neuron (\begin{DoxyParamCaption}\item[{double}]{J }\end{DoxyParamCaption})}
+
+... Constructor ...
+
+Constructor of \hyperlink{class_neuron}{Neuron} Inisialize all of \hyperlink{class_neuron}{Neuron}\textquotesingle{}s attributs 
+\begin{DoxyParams}{Parameters}
+{\em J} & (double) determine whether the neuron is inhibitory(-\/0.\+5) or exhibitory(0.\+1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_a94a250ce7e167760e593979b899745b1}\label{class_neuron_a94a250ce7e167760e593979b899745b1}} 
+\index{Neuron@{Neuron}!````~Neuron@{$\sim$\+Neuron}}
+\index{````~Neuron@{$\sim$\+Neuron}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{$\sim$\+Neuron()}{~Neuron()}}
+{\footnotesize\ttfamily Neuron\+::$\sim$\+Neuron (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor\+: clear the vector containing all pointers on connected neurons param none 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_neuron_a178217a3d7ccc951c207a78883a26546}\label{class_neuron_a178217a3d7ccc951c207a78883a26546}} 
+\index{Neuron@{Neuron}!acces\+Vector\+Spikes\+Time@{acces\+Vector\+Spikes\+Time}}
+\index{acces\+Vector\+Spikes\+Time@{acces\+Vector\+Spikes\+Time}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{acces\+Vector\+Spikes\+Time()}{accesVectorSpikesTime()}}
+{\footnotesize\ttfamily double Neuron\+::acces\+Vector\+Spikes\+Time (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Acces the time of a spike in the vector time\+Spikes 
+\begin{DoxyParams}{Parameters}
+{\em i} & \+: position in vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ts \+: time of the spike used in the class \hyperlink{class_network}{Network} to creat the file spikes.\+txt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_aa31661c57b4a07fc1ec4984be980b678}\label{class_neuron_aa31661c57b4a07fc1ec4984be980b678}} 
+\index{Neuron@{Neuron}!add\+Buffer@{add\+Buffer}}
+\index{add\+Buffer@{add\+Buffer}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{add\+Buffer()}{addBuffer()}}
+{\footnotesize\ttfamily void Neuron\+::add\+Buffer (\begin{DoxyParamCaption}\item[{double const \&}]{ut,  }\item[{double}]{get }\end{DoxyParamCaption})}
+
+Update the buffer by entering the value of input a neuron receive from other neuron to which it\textquotesingle{}s connected to 
+\begin{DoxyParams}{Parameters}
+{\em ut} & \+: (double) time at which we are in simulation\+: have to be place in buffer at time+delay \\
+\hline
+{\em get} & \+: (double) input received by the neuron to which its connected \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_a41d30979b71ec096e1fd04f9e4de25d4}\label{class_neuron_a41d30979b71ec096e1fd04f9e4de25d4}} 
+\index{Neuron@{Neuron}!connect\+With@{connect\+With}}
+\index{connect\+With@{connect\+With}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{connect\+With()}{connectWith()}}
+{\footnotesize\ttfamily void Neuron\+::connect\+With (\begin{DoxyParamCaption}\item[{\hyperlink{class_neuron}{Neuron} $\ast$}]{other }\end{DoxyParamCaption})}
+
+... Methode dealing with the connected neurons ...
+
+Add a neuron to the vector of connection with other neurons 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: (Pointer on \hyperlink{class_neuron}{Neuron}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_ad2768482bcfc532fac89f53b512b6ac8}\label{class_neuron_ad2768482bcfc532fac89f53b512b6ac8}} 
+\index{Neuron@{Neuron}!get\+I\+Exp@{get\+I\+Exp}}
+\index{get\+I\+Exp@{get\+I\+Exp}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+I\+Exp()}{getIExp()}}
+{\footnotesize\ttfamily double Neuron\+::get\+I\+Exp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acces and return the value of the external current \begin{DoxyReturn}{Returns}
+iext (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_a16fc44c9bb8a982d7d79b6df830c02c2}\label{class_neuron_a16fc44c9bb8a982d7d79b6df830c02c2}} 
+\index{Neuron@{Neuron}!get\+Membrane\+Pot@{get\+Membrane\+Pot}}
+\index{get\+Membrane\+Pot@{get\+Membrane\+Pot}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+Membrane\+Pot()}{getMembranePot()}}
+{\footnotesize\ttfamily double Neuron\+::get\+Membrane\+Pot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+... Getteurs to acces class member ...
+
+Acces and return the value of the membrane potental param none \begin{DoxyReturn}{Returns}
+the value of the membrane potential (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_aa7c31be66993ad85efbb5b3a5dc4b9be}\label{class_neuron_aa7c31be66993ad85efbb5b3a5dc4b9be}} 
+\index{Neuron@{Neuron}!get\+Nbr\+Spikes@{get\+Nbr\+Spikes}}
+\index{get\+Nbr\+Spikes@{get\+Nbr\+Spikes}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+Nbr\+Spikes()}{getNbrSpikes()}}
+{\footnotesize\ttfamily double Neuron\+::get\+Nbr\+Spikes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acces the number of time the neuron spiked\+: returns the size of the vector storing these values \begin{DoxyReturn}{Returns}
+t\+Spikes.\+size() 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_a807d071a7f1149f9db0536af4f45e684}\label{class_neuron_a807d071a7f1149f9db0536af4f45e684}} 
+\index{Neuron@{Neuron}!get\+Size\+Connection@{get\+Size\+Connection}}
+\index{get\+Size\+Connection@{get\+Size\+Connection}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+Size\+Connection()}{getSizeConnection()}}
+{\footnotesize\ttfamily unsigned long Neuron\+::get\+Size\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acces the number of connection the neuron have\+: returns the size of the vector storing the connected neurons (pointers on neurons) \begin{DoxyReturn}{Returns}
+connection.\+size() 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_a362d9688fd4da9d6edbd28f8691fb0dc}\label{class_neuron_a362d9688fd4da9d6edbd28f8691fb0dc}} 
+\index{Neuron@{Neuron}!get\+Spike\+Occured@{get\+Spike\+Occured}}
+\index{get\+Spike\+Occured@{get\+Spike\+Occured}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+Spike\+Occured()}{getSpikeOccured()}}
+{\footnotesize\ttfamily bool Neuron\+::get\+Spike\+Occured (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acces and return a boolean saying true if the neuron spiked \begin{DoxyReturn}{Returns}
+spike\+Occured 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_a13c081d437037dc7b63108e524f66fc7}\label{class_neuron_a13c081d437037dc7b63108e524f66fc7}} 
+\index{Neuron@{Neuron}!get\+Time\+Own@{get\+Time\+Own}}
+\index{get\+Time\+Own@{get\+Time\+Own}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{get\+Time\+Own()}{getTimeOwn()}}
+{\footnotesize\ttfamily double Neuron\+::get\+Time\+Own (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acces and return the own time of the neuron \begin{DoxyReturn}{Returns}
+time\+Own (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_ae45fbadb556036a0f33b2f1790ccd5d7}\label{class_neuron_ae45fbadb556036a0f33b2f1790ccd5d7}} 
+\index{Neuron@{Neuron}!give\+Spike@{give\+Spike}}
+\index{give\+Spike@{give\+Spike}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{give\+Spike()}{giveSpike()}}
+{\footnotesize\ttfamily void Neuron\+::give\+Spike (\begin{DoxyParamCaption}\item[{double const \&}]{temps,  }\item[{double}]{give }\end{DoxyParamCaption})}
+
+Gives the place in buffer where we are at a time t 
+\begin{DoxyParams}{Parameters}
+{\em temps} & \+: (double) time at which we are in simulation \\
+\hline
+{\em give} & \+: (double) output given by the neuron to its connected neuron \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_a0276a70354f2fb046123efeec43420dc}\label{class_neuron_a0276a70354f2fb046123efeec43420dc}} 
+\index{Neuron@{Neuron}!idx\+Read@{idx\+Read}}
+\index{idx\+Read@{idx\+Read}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{idx\+Read()}{idxRead()}}
+{\footnotesize\ttfamily int Neuron\+::idx\+Read (\begin{DoxyParamCaption}\item[{double}]{now }\end{DoxyParamCaption})}
+
+Gives the place in buffer where we are at a time t 
+\begin{DoxyParams}{Parameters}
+{\em now} & \+: (double) time at which we are in simulation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+read \+: (int) place in buffer we have to read 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_neuron_a62d6ff8e0fb0f776dfa9bc555a994b8b}\label{class_neuron_a62d6ff8e0fb0f776dfa9bc555a994b8b}} 
+\index{Neuron@{Neuron}!reset\+Buffer@{reset\+Buffer}}
+\index{reset\+Buffer@{reset\+Buffer}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{reset\+Buffer()}{resetBuffer()}}
+{\footnotesize\ttfamily void Neuron\+::reset\+Buffer (\begin{DoxyParamCaption}\item[{double}]{temps }\end{DoxyParamCaption})}
+
+Reset the place of the buffer in which we are at zero after each time set in the simulation 
+\begin{DoxyParams}{Parameters}
+{\em temps} & \+: (double) time at which we are in simulation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_ad267b5027c8549d85ade592918286b89}\label{class_neuron_ad267b5027c8549d85ade592918286b89}} 
+\index{Neuron@{Neuron}!set\+I\+Ext@{set\+I\+Ext}}
+\index{set\+I\+Ext@{set\+I\+Ext}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{set\+I\+Ext()}{setIExt()}}
+{\footnotesize\ttfamily void Neuron\+::set\+I\+Ext (\begin{DoxyParamCaption}\item[{double}]{ie }\end{DoxyParamCaption})}
+
+Modify the external potential of the neuron 
+\begin{DoxyParams}{Parameters}
+{\em ie} & \+: Iext (double) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_a7613a6978d583cbbe287876144325780}\label{class_neuron_a7613a6978d583cbbe287876144325780}} 
+\index{Neuron@{Neuron}!set\+Membrane\+Pot@{set\+Membrane\+Pot}}
+\index{set\+Membrane\+Pot@{set\+Membrane\+Pot}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{set\+Membrane\+Pot()}{setMembranePot()}}
+{\footnotesize\ttfamily void Neuron\+::set\+Membrane\+Pot (\begin{DoxyParamCaption}\item[{double}]{mp }\end{DoxyParamCaption})}
+
+... Setteur to modify class member ...
+
+Modify the membrane potential of the neuron 
+\begin{DoxyParams}{Parameters}
+{\em mp} & \+: membrane\+Pot (double) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_neuron_abce9bb9eecd7ff1f93b5a816bdaacc6f}\label{class_neuron_abce9bb9eecd7ff1f93b5a816bdaacc6f}} 
+\index{Neuron@{Neuron}!simulation@{simulation}}
+\index{simulation@{simulation}!Neuron@{Neuron}}
+\subsubsection{\texorpdfstring{simulation()}{simulation()}}
+{\footnotesize\ttfamily void Neuron\+::simulation (\begin{DoxyParamCaption}\item[{int const \&}]{poisson }\end{DoxyParamCaption})}
+
+... Methode that updates the neuron state from time t to time t+T (T=n$\ast$h) ...
+
+One simulation \+: updates all the state at a time t 
+\begin{DoxyParams}{Parameters}
+{\em poisson} & \+: (int) random neuron representing number of spike from the rest of the brain the definition of this poisson distribution is done in the class \hyperlink{class_network}{Network} \\
+\hline
+\end{DoxyParams}
+Check State of \hyperlink{class_neuron}{Neuron}\+: if Refractory -\/$>$ nothing happens\+: V=0 for 2ms if Not\+Refractory -\/$>$ Upadate normally
+
+Check the membrane\+Pot\+: if V$>$Vseuil -\/$>$ spike and have to put the state to refractory if V$<$seuil -\/$>$ Continue incrementing
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Neuron.\+hpp\item 
+Neuron.\+cpp\end{DoxyCompactItemize}

@@ -7,9 +7,42 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include "Neuron.hpp"
+#include <stdio.h>
+#include "Network.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main()
+{
+    Network net; /**< (Network) creat an instance of network */
+    cout <<"Creation of the network"<<endl;
+    /**
+     * Ask the user how many neurons he wants
+     */
+    int nEx;
+    cout << "How many Exhibitories Neuron are you having? " << endl;
+    cin >> nEx;
+    
+    
+    //Call all function of Network in order to run a simualtion
+     
+    net.neuronInitialisation(nEx,0.1, (-0.5));
+    cout <<"Neuron initiated"<<endl;
+    
+    net.connectionNeurons();
+     cout <<"Neuron Connected"<<endl;
+    net.timeSet();
+    cout <<"time set"<<endl;
+    
+    net.runSimulation();
+    cout <<"Simulation ran"<<endl;
+    
+    net.spikeData();
+    
+    cout << "end of program"<<endl;
+
+    
     return 0;
 }

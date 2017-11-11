@@ -1,0 +1,107 @@
+\hypertarget{class_network}{}\section{Network Class Reference}
+\label{class_network}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$Network.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_network_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{Network} ()
+\item 
+void \hyperlink{class_network_ac37f578756aa63cd1df9f0ccbdd20aa1}{neuron\+Initialisation} (const int \&n\+Exi, double j\+Exi, double j\+Inhi)
+\item 
+void \hyperlink{class_network_a431e2ab1f9bf907746583ac391832da3}{connection\+Neurons} ()
+\item 
+void \hyperlink{class_network_a283257767adc8e004991b6fd14e1fc1d}{time\+Set} ()
+\item 
+void \hyperlink{class_network_a0a2cdb2bc8a68e83748d280212e7f48b}{run\+Simulation} ()
+\item 
+void \hyperlink{class_network_a051978c15b901e42c7353d8dff33120d}{spike\+Data} ()
+\item 
+unsigned long \hyperlink{class_network_a60cc1bdce0650a7f40dc450408a5eaf2}{get\+Size\+Neurons} ()
+\item 
+\hyperlink{class_network_a7a4e19cdb4bf0c7ecf82baa643831492}{$\sim$\+Network} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_network}{Network} Here we have all the function and variables needed in order to run a simualation of a chosen number of neurons for a chosen time. Here we creat a vector containing all our neurons \+: the first part contains the exhibitories (differs by having a J=0.\+1 while Jinhi=-\/0.\+5) We also connect all neurons to each other randomly The class \hyperlink{class_network}{Network} will be called in the main() 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_network_a3cc2fb4f8fa4d507077e8da85ce5a1c8}\label{class_network_a3cc2fb4f8fa4d507077e8da85ce5a1c8}} 
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection{\texorpdfstring{Network()}{Network()}}
+{\footnotesize\ttfamily Network\+::\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+... Constructor ...
+
+Constructor of \hyperlink{class_network}{Network} Inisialize all of \hyperlink{class_network}{Network}\textquotesingle{}s attributs \mbox{\Hypertarget{class_network_a7a4e19cdb4bf0c7ecf82baa643831492}\label{class_network_a7a4e19cdb4bf0c7ecf82baa643831492}} 
+\index{Network@{Network}!````~Network@{$\sim$\+Network}}
+\index{````~Network@{$\sim$\+Network}!Network@{Network}}
+\subsubsection{\texorpdfstring{$\sim$\+Network()}{~Network()}}
+{\footnotesize\ttfamily Network\+::$\sim$\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+... Destructor ...
+
+In charge of freeing all memories param none 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_a431e2ab1f9bf907746583ac391832da3}\label{class_network_a431e2ab1f9bf907746583ac391832da3}} 
+\index{Network@{Network}!connection\+Neurons@{connection\+Neurons}}
+\index{connection\+Neurons@{connection\+Neurons}!Network@{Network}}
+\subsubsection{\texorpdfstring{connection\+Neurons()}{connectionNeurons()}}
+{\footnotesize\ttfamily void Network\+::connection\+Neurons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connects randomly neurons to one another param \+: \textquotesingle{}none\textquotesingle{} Gives a random number \+: Random neuron to which it\textquotesingle{}ll be connected Range \+: nbr of \hyperlink{class_neuron}{Neuron} we have both exhibitory and inhibitory \mbox{\Hypertarget{class_network_a60cc1bdce0650a7f40dc450408a5eaf2}\label{class_network_a60cc1bdce0650a7f40dc450408a5eaf2}} 
+\index{Network@{Network}!get\+Size\+Neurons@{get\+Size\+Neurons}}
+\index{get\+Size\+Neurons@{get\+Size\+Neurons}!Network@{Network}}
+\subsubsection{\texorpdfstring{get\+Size\+Neurons()}{getSizeNeurons()}}
+{\footnotesize\ttfamily unsigned long Network\+::get\+Size\+Neurons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+... Function for tests ...
+
+Returns the size of the vector containing all the neurons of the network param none \mbox{\Hypertarget{class_network_ac37f578756aa63cd1df9f0ccbdd20aa1}\label{class_network_ac37f578756aa63cd1df9f0ccbdd20aa1}} 
+\index{Network@{Network}!neuron\+Initialisation@{neuron\+Initialisation}}
+\index{neuron\+Initialisation@{neuron\+Initialisation}!Network@{Network}}
+\subsubsection{\texorpdfstring{neuron\+Initialisation()}{neuronInitialisation()}}
+{\footnotesize\ttfamily void Network\+::neuron\+Initialisation (\begin{DoxyParamCaption}\item[{const int \&}]{n\+Exi,  }\item[{double}]{j\+Exi,  }\item[{double}]{j\+Inhi }\end{DoxyParamCaption})}
+
+... functions to initailise all the variables needed for the running of simulation ...
+
+Inisialize the number of exhibitories and inhibitories and push\+\_\+back both vectors accordingly 
+\begin{DoxyParams}{Parameters}
+{\em n\+Exi} & \+: (int) number of exhibitory neuron \\
+\hline
+{\em j\+Exi} & \+: (double) value of the output given by exhibitory neuron\+: 0.\+1 \\
+\hline
+{\em j\+Inhi} & \+: (double) value of the output given by inhibitories neuron\+: -\/0.\+5 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_a0a2cdb2bc8a68e83748d280212e7f48b}\label{class_network_a0a2cdb2bc8a68e83748d280212e7f48b}} 
+\index{Network@{Network}!run\+Simulation@{run\+Simulation}}
+\index{run\+Simulation@{run\+Simulation}!Network@{Network}}
+\subsubsection{\texorpdfstring{run\+Simulation()}{runSimulation()}}
+{\footnotesize\ttfamily void Network\+::run\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+... Running the simulation ...
+
+Runs the simulation with all the variables chosen during a certain amount of time param none There is the possibility to save all the values and state of all neurons during the simulation in aexternal file. But due to lack of uses and of necessity we commented this option \mbox{\Hypertarget{class_network_a051978c15b901e42c7353d8dff33120d}\label{class_network_a051978c15b901e42c7353d8dff33120d}} 
+\index{Network@{Network}!spike\+Data@{spike\+Data}}
+\index{spike\+Data@{spike\+Data}!Network@{Network}}
+\subsubsection{\texorpdfstring{spike\+Data()}{spikeData()}}
+{\footnotesize\ttfamily void Network\+::spike\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a file and store which neuron spikes at what time\+: enables to recreat the wanted graph using python param none \mbox{\Hypertarget{class_network_a283257767adc8e004991b6fd14e1fc1d}\label{class_network_a283257767adc8e004991b6fd14e1fc1d}} 
+\index{Network@{Network}!time\+Set@{time\+Set}}
+\index{time\+Set@{time\+Set}!Network@{Network}}
+\subsubsection{\texorpdfstring{time\+Set()}{timeSet()}}
+{\footnotesize\ttfamily void Network\+::time\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Set the time of the simulation param \+: none Here we ask the user the initial and final time of the duration of the simulation and the program will consider the interval of time \+: t\+Stop represents total time of simulation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Network.\+hpp\item 
+Network.\+cpp\end{DoxyCompactItemize}
