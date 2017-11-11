@@ -1,10 +1,4 @@
-//
-//  unitest.cpp
-//  Brunel
-//
-//  Created by Nina Wahler on 10.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #include "Neuron.hpp"
 #include "Constant.hpp"
@@ -38,8 +32,7 @@ using namespace std;
  nTest3.simulation(0);
  nTest3.simulation(0);
  EXPECT_EQ(1.0, nTest3.getNbrSpikes());
-  /*
- */
+
  }
  
 
@@ -50,7 +43,7 @@ using namespace std;
  //Since iext = 1.01, a spike should arrive at time 92.5 (we have a time step of 0.1)
  for (int i(0); i<924 ; i++)
  {
- n.simulation(0);
+  n.simulation(0);
  }
  
  
@@ -58,7 +51,7 @@ using namespace std;
  
  for (int j(0); j<2; j++)
  {
- n.simulation(0);
+  n.simulation(0);
  }
  EXPECT_EQ(1.0, n.getNbrSpikes());
  
@@ -82,7 +75,6 @@ using namespace std;
  Neuron* n1 = new Neuron(0.1);
  Neuron* n2 = new Neuron(0.0);
  
- //n1->setIExt(20);
  n1->setIExt(10);
  //Testing the connection of two neurons
  n1->connectWith(n2);
