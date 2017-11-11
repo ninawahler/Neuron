@@ -1,10 +1,4 @@
-//
-//  main.cpp
-//  Brunel
-//
-//  Created by Nina Wahler on 07.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #include <iostream>
 #include <fstream>
@@ -18,9 +12,9 @@ int main()
 {
     Network net; /**< (Network) creat an instance of network */
     cout <<"Creation of the network"<<endl;
-    /**
-     * Ask the user how many neurons he wants
-     */
+    
+     // Ask the user how many neurons he wants
+     
     int nEx;
     cout << "How many Exhibitories Neuron are you having? " << endl;
     cin >> nEx;
