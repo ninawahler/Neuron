@@ -1,10 +1,4 @@
-//
-//  Network.hpp
-//  Brunel
-//
-//  Created by Nina Wahler on 07.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #ifndef Network_hpp
 #define Network_hpp
