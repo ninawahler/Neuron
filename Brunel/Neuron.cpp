@@ -1,10 +1,4 @@
-//
-//  Neuron.cpp
-//  Brunel
-//
-//  Created by Nina Wahler on 07.11.17.
-//  Copyright © 2017 Nina Wahler. All rights reserved.
-//
+
 
 #include "Neuron.hpp"
 #include "Constant.cpp"
